@@ -182,9 +182,9 @@ const App = () => {
       </form>
 
       <div className='two'>
-        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.years}</span>years</h1>
-        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.months}</span>months</h1>
-        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.days}</span>days</h1>
+        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.years}</span>{age.years === 1 ? 'year':'years'}</h1>
+        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.months}</span>{age.months === 1 ? 'month':'months'}</h1>
+        <h1><span style={isCalculated ? {letterSpacing:'0px', color:'hsl(259, 100%, 65%)',marginRight:"10px"}: {}}>{age.days}</span>{age.days === 1 ? 'day':'days'}</h1>
       </div>
     </div>
   )
