@@ -99,14 +99,6 @@ const App = () => {
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
 
-    //Checking birthday hasn't occurred yet this year
-    if (
-      today.getMonth() < birthDate.getMonth() ||
-      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
-    ) {
-      years--; 
-    }
-
     if (days < 0) {
       months--;
       const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
@@ -116,6 +108,12 @@ const App = () => {
     if (months < 0) {
       years--;
       months += 12;
+    }
+
+    const thisYearBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+    if (today < thisYearBirthday)
+    {
+      years--;
     }
 
     // 🔔 Play preloaded audio
