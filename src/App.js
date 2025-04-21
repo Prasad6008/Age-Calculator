@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import arrowIcon from './images/icon-arrow.svg'
-import Italic from './fonts/Poppins-Italic.ttf'
 
 const App = () => {
 
