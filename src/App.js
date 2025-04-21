@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import arrowIcon from './images/icon-arrow.svg'
+import { useEffect ,useRef} from 'react'
 
 const App = () => {
+
+  //Audio 
+  const audioRef = useRef(null)
+  useEffect(() => {
+    audioRef.current = new Audio('bell.mp3')
+    audioRef.current.load(); 
+  }, []);
 
   const [day,setDay] = useState('')
   const [month,setMonth] = useState('')
@@ -100,6 +108,13 @@ const App = () => {
     if (months < 0) {
       years--;
       months += 12;
+    }
+
+    // 🔔 Play preloaded audio
+    if (audioRef.current) 
+    {
+      audioRef.current.currentTime = 0; // rewind
+      audioRef.current.play();
     }
 
     setAge({ years, months, days });
