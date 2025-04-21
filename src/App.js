@@ -95,6 +95,14 @@ const App = () => {
 
   const calculateAge = (birthDate) => {
     const today = new Date();
+
+    if (birthDate > today) 
+    {
+      setAge({ years: '--', months: '--', days: '--' });
+      alert("Birth date must be in the past");
+      return;
+    }
+  
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
@@ -108,12 +116,6 @@ const App = () => {
     if (months < 0) {
       years--;
       months += 12;
-    }
-
-    const thisYearBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
-    if (today < thisYearBirthday)
-    {
-      years--;
     }
 
     // 🔔 Play preloaded audio
