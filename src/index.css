@@ -1,0 +1,218 @@
+
+@font-face {
+    font-family: Regular;
+    src: url('./fonts//Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Bold;
+    src: url('./fonts//Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: ExtraBoldItalic;
+    src: url('./fonts/Poppins-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+    font-family: Italic;
+    src: url('./fonts/Poppins-Italic.ttf');
+}
+  
+body 
+{
+    background-color: aliceblue;
+}
+
+.container
+{
+    padding: 20px 35px;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom-right-radius:120px ;
+    width: 40%;
+    min-height: 50vh;
+    margin: 150px auto 0px;
+}
+
+
+.one 
+{
+    border-bottom: 2px solid hsl(0, 11%, 93%);
+    padding: 25px 0px;
+    display: flex;
+    position: relative;
+}
+
+.one div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.one div input 
+{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 12px;
+    /* padding: 10px 20px; */
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 7px;
+    width: 100px;
+    margin-right: 20px;
+    font-weight: 900;
+}
+
+.one div input:hover
+{
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+.one div input:focus
+{
+    outline:1px solid hsl(259, 100%, 65%);
+}
+
+.one div input {
+    caret-color: hsl(259, 100%, 65%);
+  }
+
+.one div input::placeholder 
+{
+    font-family: Bold;
+}
+
+.one div label 
+{
+    font-family: Bold;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.two 
+{
+    font-family: ExtraBoldItalic;
+    padding: 10px 0px;
+}
+
+.two h1 
+{
+    font-size: 70px;
+    line-height: 25px;
+}
+
+.two span 
+{
+    color: hsl(259, 100%, 65%);
+    letter-spacing: 20px;
+}
+
+.one , .two 
+{
+    width: 95%;
+}
+
+.three
+{
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+}
+
+.three button 
+{
+    border-radius: 50%;
+    padding: 20px;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+}
+
+.three button:hover
+{
+    background-color: black;
+}
+
+.three button img 
+{
+    width: 30px;
+}
+
+.error 
+{
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    margin-top: 10px;
+    font-family: Italic;
+}
+
+
+@media (max-width:740px) 
+{
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+    body 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:hsl(0, 0%, 94%); 
+    }
+    .container
+    {
+        width: 90vw;
+        padding: 0px 10px ;
+        margin: 0;
+    }
+    .one 
+    {
+        width: 100%;
+        padding-bottom: 80px;
+        padding-left: 10px;
+    }
+    .one div input
+    {
+        width:50%;
+        font-size: 20px;
+    }
+    .one div label 
+    {
+        margin-bottom: 2px;
+    }
+    .three 
+    {
+        right: 40%;
+        left: 40%;
+    }
+    .three button 
+    {
+        padding: 15px;
+    }
+    .two 
+    {
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+    .two h1
+    {
+        font-size: 40px;
+    }
+    .two span 
+    {
+        color: hsl(259, 100%, 65%);
+        letter-spacing: 10px;
+    }
+    .error 
+    {
+        font-size: 8px;
+    }
+}
