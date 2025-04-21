@@ -38,7 +38,7 @@ A simple, responsive web application built using **React** that calculates a use
 ## 🛠️ Tech Stack
 
 - **React**
-- **CSS (or Tailwind, if applicable)**
+- **CSS 
 - **JavaScript**
 
 ---
